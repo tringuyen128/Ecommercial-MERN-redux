@@ -50,6 +50,8 @@ const Right = styled.div`
 const MenuItem = styled.div`
   font-size: 14px;
   cursor: pointer;
+  display: flex;
+  margin: 0 20px;
 `
 
 const Navbar = () => {

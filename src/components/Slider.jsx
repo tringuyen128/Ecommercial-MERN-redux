@@ -8,6 +8,7 @@ const Container = styled.div`
   height: 100vh;
   display: flex;
   position: relative;
+  overflow: hidden;
 `
 const Arrow = styled.div`
   width: 50px;
@@ -17,7 +18,7 @@ const Arrow = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  postion: absolute;
+  position: absolute;
   top: 0;
   bottom: 0;
   left: ${(props) => props.direction === 'left' && '10px'};
@@ -29,6 +30,7 @@ const Arrow = styled.div`
 
 const Wrapper = styled.div`
   height: 100%;
+  display: flex;
 `
 
 const Slide = styled.div`
@@ -36,6 +38,7 @@ const Slide = styled.div`
   height: 100fh;
   display: flex;
   align-items: center;
+  background-color: ${(props) => props.bg};
 `
 const ImgContainer = styled.div`
   height: 100%;
@@ -43,10 +46,27 @@ const ImgContainer = styled.div`
 `
 const Image = styled.img`
   height: 80%;
+  margin-left: 30px;
 `
 
 const InfoContainer = styled.div`
   flex: 1;
+  padding: 20px;
+`
+const Title = styled.h1`
+  font-size: 40px;
+`
+const Desc = styled.p`
+  margin: 30px 0px;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 3px;
+`
+const Button = styled.button`
+  padding: 10px;
+  font-size: 20px;
+  background-color: transparent;
+  cursor: pointer;
 `
 
 const Slider = () => {
@@ -56,11 +76,37 @@ const Slider = () => {
         <ArrowLeftIcon />
       </Arrow>
       <Wrapper>
-        <Slide>
+        <Slide bg="f5fafd">
           <ImgContainer>
-            <Image src="" />
+            <Image src={require('../assets/home-image.png')} />
           </ImgContainer>
-          <InfoContainer></InfoContainer>
+          <InfoContainer>
+            <Title>CELEBRATE SUMMER</Title>
+            <Desc>
+              Find all their favorites, and all the fun, in one place.
+            </Desc>
+            <Button>SHOP NOW</Button>
+          </InfoContainer>
+        </Slide>
+        <Slide bg="fcf1ed">
+          <ImgContainer>
+            <Image src={require('../assets/home-image.png')} />
+          </ImgContainer>
+          <InfoContainer>
+            <Title>FEATURED SHOP</Title>
+            <Desc>Search for popular styles and match your loves' styles.</Desc>
+            <Button>SHOP NOW</Button>
+          </InfoContainer>
+        </Slide>
+        <Slide bg="fbf0f4">
+          <ImgContainer>
+            <Image src={require('../assets/home-image.png')} />
+          </ImgContainer>
+          <InfoContainer>
+            <Title>NEW ARRIVALS</Title>
+            <Desc>New outfits to love for your little ones.</Desc>
+            <Button>SHOP NOW</Button>
+          </InfoContainer>
         </Slide>
       </Wrapper>
       <Arrow direction="right">
