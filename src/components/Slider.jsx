@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft'
 import ArrowRightIcon from '@mui/icons-material/ArrowRight'
+import { sliderItems } from '../data'
 
 const Container = styled.div`
   width: 100%;
@@ -26,11 +27,13 @@ const Arrow = styled.div`
   margin: auto;
   cursor: pointer;
   opacity: 0.5;
+  z-index: 2;
 `
 
 const Wrapper = styled.div`
   height: 100%;
   display: flex;
+  transform: translateX(${(props) => props.slideIndex * -100}vw);
 `
 
 const Slide = styled.div`
@@ -70,46 +73,35 @@ const Button = styled.button`
 `
 
 const Slider = () => {
+  const [slideIndex, setSlideIndex] = useState(0)
+  const handleClick = (direction) => {
+    if (direction === 'left') {
+      setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2)
+    } else {
+      setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0)
+    }
+  }
+
   return (
     <Container>
-      <Arrow direction="left">
+      <Arrow direction="left" onClick={() => handleClick('left')}>
         <ArrowLeftIcon />
       </Arrow>
-      <Wrapper>
-        <Slide bg="f5fafd">
-          <ImgContainer>
-            <Image src={require('../assets/home-image.png')} />
-          </ImgContainer>
-          <InfoContainer>
-            <Title>CELEBRATE SUMMER</Title>
-            <Desc>
-              Find all their favorites, and all the fun, in one place.
-            </Desc>
-            <Button>SHOP NOW</Button>
-          </InfoContainer>
-        </Slide>
-        <Slide bg="fcf1ed">
-          <ImgContainer>
-            <Image src={require('../assets/home-image.png')} />
-          </ImgContainer>
-          <InfoContainer>
-            <Title>FEATURED SHOP</Title>
-            <Desc>Search for popular styles and match your loves' styles.</Desc>
-            <Button>SHOP NOW</Button>
-          </InfoContainer>
-        </Slide>
-        <Slide bg="fbf0f4">
-          <ImgContainer>
-            <Image src={require('../assets/home-image.png')} />
-          </ImgContainer>
-          <InfoContainer>
-            <Title>NEW ARRIVALS</Title>
-            <Desc>New outfits to love for your little ones.</Desc>
-            <Button>SHOP NOW</Button>
-          </InfoContainer>
-        </Slide>
+      <Wrapper slideIndex={slideIndex}>
+        {sliderItems.map((item) => (
+          <Slide bg={item.bg}>
+            <ImgContainer>
+              <Image src={item.img} />
+            </ImgContainer>
+            <InfoContainer>
+              <Title>{item.title}</Title>
+              <Desc>{item.desc}</Desc>
+              <Button>SHOP NOW</Button>
+            </InfoContainer>
+          </Slide>
+        ))}
       </Wrapper>
-      <Arrow direction="right">
+      <Arrow direction="right" onClick={() => handleClick('right')}>
         <ArrowRightIcon />
       </Arrow>
     </Container>
