@@ -1,8 +1,9 @@
 import React from 'react'
-import Categories from '../Categories'
+import Categories from '../components/Categories'
 import Annoucement from '../components/Annoucement'
 import Navbar from '../components/Navbar'
 import Slider from '../components/Slider'
+import Products from '../components/Products'
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <Navbar />
       <Slider />
       <Categories />
+      <Products />
     </div>
   )
 }
