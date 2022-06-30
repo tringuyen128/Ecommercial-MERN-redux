@@ -50,11 +50,11 @@ export const popularProducts = [
   },
   {
     id: 2,
-    img: 'https://cdn.shopify.com/s/files/1/0101/4832/products/Angela_Natural_Tee.png?v=1606780388',
+    img: 'https://images.squarespace-cdn.com/content/v1/59d8124080bd5eadd869b8b7/1554059268752-2R4RY6HRNB4QTEG486CH/LL_Kids-T-shirt_Adj300dpi_printfile_mockup_Front_Flat_CharityPink_90percent.png?format=1000w',
   },
   {
     id: 3,
-    img: 'https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1YOTF010O/UCS319_1YOT_F010O_S_182_SLF.png',
+    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnPMFsL7FsRioD_GduDyziBtVoQcdm-bB2e11RhIFrVsdkNiZJRLNVQsj5h9nk63fNg8c&usqp=CAU',
   },
   {
     id: 4,
@@ -66,14 +66,14 @@ export const popularProducts = [
   },
   {
     id: 6,
-    img: 'https://d3o2e4jr3mxnm3.cloudfront.net/Rocket-Vintage-Chill-Cap_66374_1_lg.png',
+    img: 'https://www.rookieusa.com/msa/images/I/81shY30hwdL._AC_SR1024,1024_.jpg',
   },
   {
     id: 7,
-    img: 'https://www.vintageindustries.nl/download_front/qympzk1762/2217_Arrow_Jacket_Forest.png',
+    img: 'https://www.rookieusa.com/msa/images/I/41bQFn7r3JL._CLa%7C560,560%7C81CJn4pyY1L.png%7C8,8,544,544+0,0,560,560_FMjpg.png',
   },
   {
     id: 8,
-    img: 'https://www.pngarts.com/files/3/Women-Jacket-PNG-High-Quality-Image.png',
+    img: 'https://www.imagehandler.net/preview/?istyle=0000&fmt=jpg&w=300&h=300&cmp=100&c=000&img=A1035970000&iset=0100&iindex=0170&retBlank=1x1&bg=f6f6f6',
   },
 ]
