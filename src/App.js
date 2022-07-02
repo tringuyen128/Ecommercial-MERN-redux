@@ -1,9 +1,9 @@
-import Product from './pages/Product'
+import Login from './pages/Login'
 
 function App() {
   return (
     <div>
-      <Product />
+      <Login />
     </div>
   )
 }
