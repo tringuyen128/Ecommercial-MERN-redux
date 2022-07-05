@@ -9,9 +9,16 @@ import {
 } from '@mui/icons-material'
 import React from 'react'
 import styled from 'styled-components'
+import { mobile } from '../responsive'
 
 const Container = styled.div`
   display: flex;
+  ${mobile({
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'column',
+  })}
 `
 const Left = styled.div`
   flex: 1;

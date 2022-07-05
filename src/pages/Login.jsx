@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { mobile, tablet } from '../responsive'
 
 const Container = styled.div`
   width: 100vw;
@@ -19,6 +20,8 @@ const Wrapper = styled.div`
   width: 25%;
   padding: 20px;
   background-color: white;
+  ${mobile({ width: '75%' })}
+  ${tablet({ width: '75%', height: '30%' })}
 `
 const Title = styled.h1`
   font-size: 24px;
